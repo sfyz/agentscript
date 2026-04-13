@@ -1,0 +1,54 @@
+title = "AgentScript Gitleaks Config"
+
+[extend]
+# Extend the default gitleaks ruleset
+useDefault = true
+
+[[rules]]
+id = "internal-git-server"
+description = "Internal Salesforce GHE URL"
+regex = '''git\.soma\.salesforce\.com'''
+tags = ["internal", "url"]
+
+[[rules]]
+id = "internal-gitcore-server"
+description = "Internal Salesforce gitcore URL"
+regex = '''gitcore\.soma\.salesforce\.com'''
+tags = ["internal", "url"]
+
+[[rules]]
+id = "salesforce-employee-email"
+description = "Salesforce employee email in non-approved files"
+regex = '''[a-zA-Z0-9._%+\-]+@salesforce\.com'''
+tags = ["pii", "email"]
+
+[rules.allowlist]
+# License headers and NOTICE files are expected to reference Salesforce
+files = [
+  '''LICENSE\.txt''',
+  '''NOTICE''',
+  '''CONTRIBUTING\.md''',
+  '''CODE_OF_CONDUCT\.md''',
+  '''SECURITY\.md''',
+  '''\.md$''',
+]
+regexes = [
+  # Standard Apache 2.0 copyright headers
+  '''Copyright \(c\) \d{4}.*Salesforce''',
+  # Public contact emails
+  '''security@salesforce\.com''',
+  '''ossconduct@salesforce\.com''',
+  '''agentscript@salesforce\.com''',
+]
+
+[[rules]]
+id = "salesforce-org-id"
+description = "Salesforce org ID (15 or 18 char)"
+regex = '''00[Dd][a-zA-Z0-9]{12,15}'''
+tags = ["internal", "org-id"]
+
+[rules.allowlist]
+paths = [
+  '''test/''',
+  '''\.md$''',
+]

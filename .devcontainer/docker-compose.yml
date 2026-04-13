@@ -1,0 +1,18 @@
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - ..:/workspace:cached
+    command: sleep infinity
+    stop_grace_period: 30s
+    init: true
+    ulimits:
+      nofile:
+        soft: 65536
+        hard: 65536
+    environment:
+      - EMSDK_QUIET=1
+      - PYTHONUNBUFFERED=1
+      - NODE_ENV=development
