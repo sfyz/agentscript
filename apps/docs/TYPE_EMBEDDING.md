@@ -66,8 +66,8 @@ Edit `extract-types.ts` and add files to the `filesToExtract` array:
 
 ```typescript
 const filesToExtract = [
-  'packages/typescript-sdk/src/types.ts',
-  'packages/typescript-sdk/src/linter/types.ts',
+  'packages/language/src/types.ts',
+  'packages/language/src/linter/types.ts',
   'packages/your-new-file.ts',  // Add here
 ];
 ```
@@ -98,7 +98,7 @@ const filesToExtract = [
 
 ## Example
 
-See `docs/typescript-sdk/type-embedding-example.mdx` for a complete example.
+See `docs/type-embedding-example.mdx` for a complete example.
 
 ## Troubleshooting
 

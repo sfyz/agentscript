@@ -98,8 +98,7 @@ export function compileModalityParameters(
 
 /**
  * Compile language configuration from the language block.
- * Returns null (producing empty modality_parameters) when any locale is invalid,
- * matching Python compiler behavior.
+ * Returns null (producing empty modality_parameters) when any locale is invalid.
  */
 function compileLanguageConfiguration(
   languageBlock: ParsedLanguage | undefined,

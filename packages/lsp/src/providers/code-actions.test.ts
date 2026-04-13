@@ -71,7 +71,7 @@ function getTopicConversionEdits(source: string): TextEdit[] | null {
   return edits ?? null;
 }
 
-// TODO: restore once topic deprecated() is re-enabled in schema.ts
+// Skipped: topic deprecation diagnostics are temporarily disabled.
 describe.skip('topic → subagent conversion quick-fix', () => {
   test('renames topic keyword to subagent', () => {
     const source = `topic Foo:\n    description: "test"`;

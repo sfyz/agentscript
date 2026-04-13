@@ -12,7 +12,7 @@
  *
  * The OpenAPI → zod generator outputs camelCase keys. This script transforms
  * property names inside z.object() calls to snake_case to match the AgentJSON
- * output format used by the Python compiler.
+ * output format used by the runtime.
  *
  * Usage: node transform-snake-case.mjs <file.ts>
  */

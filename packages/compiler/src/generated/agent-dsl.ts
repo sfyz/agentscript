@@ -18,7 +18,7 @@ import * as z from 'zod';
  *
  * Enum for the agent type.
  *
- * Enum values not found here [TODO: link to docs] are not supported here.
+ * Enum values not listed here are not supported.
  */
 export const agentType = z.enum([
   'EinsteinServiceAgent',
@@ -186,7 +186,7 @@ export const parameterDataType = z.enum([
  * InputParameter
  *
  * Input parameter for a function.
- * TODO: document what an LLM would see.
+ * Defines how an input parameter appears to the LLM at runtime.
  */
 export const inputParameter = z.object({
   developer_name: z.string(),

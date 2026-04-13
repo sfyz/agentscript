@@ -90,20 +90,12 @@ export default defineConfig({
       port: 27401,
     },
     port: 27002,
-    // TODO: Re-enable when deploying to Heroku or a platform with backend support
+    // Uncomment to enable API proxy when deploying with a backend server.
     // proxy: {
     //   '/api': {
     //     target: 'http://localhost:8080',
     //     changeOrigin: true,
-    //     // Don't rewrite - keep /api prefix so dev and prod are consistent
-    //     ws: true, // Enable WebSocket proxying
-    //     // Fix for large binary responses (Loro snapshots can be 700KB+)
-    //     configure: proxy => {
-    //       proxy.on('proxyRes', proxyRes => {
-    //         // Disable buffering for binary responses
-    //         proxyRes.headers['x-accel-buffering'] = 'no';
-    //       });
-    //     },
+    //     ws: true,
     //   },
     // },
   },

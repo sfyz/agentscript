@@ -789,8 +789,8 @@ describe('state variables: context variable duplication', () => {
     // takes precedence as a context variable, and the mutable definition
     // is excluded from state_variables since the name is already claimed.
     //
-    // In the TS compiler, compileStateVariables checks `contextVarNames`
-    // and skips if the name is already there.
+    // compileStateVariables checks `contextVarNames` and skips if the
+    // name is already there.
     const result = compileSource(
       agentSource(`
 variables:
@@ -1002,7 +1002,7 @@ variables:
 });
 
 // ---------------------------------------------------------------------------
-// Name validation (ported from Python Pydantic validators)
+// Name validation
 // ---------------------------------------------------------------------------
 
 describe('state variables: name validation', () => {

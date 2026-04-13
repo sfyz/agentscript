@@ -6,10 +6,8 @@
  */
 
 /**
- * CST Serialization - Convert CST back to AgentScript text
- *
- * TODO: This functionality needs to be implemented in @agentscript/core
- * The old @agentscript/core package that provided these functions has been removed.
+ * CST Serialization - Convert CST back to AgentScript text.
+ * Currently uses a simple text-based approach.
  */
 
 import type { SerializedNode } from '~/store/source';

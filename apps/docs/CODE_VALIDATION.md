@@ -39,7 +39,7 @@ The script validates:
 
 ### Common Imports
 
-The validator automatically includes common imports from `@agentscript/typescript-sdk`:
+The validator automatically includes common imports from `@agentscript/agentforce`:
 
 - `LinterRule`, `DiagnosticSeverity`, `createDiagnostic`, `getNodeRange`
 - `BaseNode`, `DecoratedNode`, `ValidationContext`
@@ -94,7 +94,7 @@ If your example references functions that don't exist in the SDK, add them to th
 - **Use complete, working examples** when possible
 - **Test code blocks** before adding them to docs
 - **Keep examples simple** and focused on one concept
-- **Use real SDK APIs** from `@agentscript/typescript-sdk`
+- **Use real SDK APIs** from `@agentscript/agentforce`
 
 ### ❌ DON'T
 
@@ -110,7 +110,7 @@ import {
   DiagnosticSeverity,
   createDiagnostic,
   getNodeRange
-} from '@agentscript/typescript-sdk';
+} from '@agentscript/agentforce';
 
 export const noEmptyBlocks: LinterRule = {
   name: 'no-empty-blocks',
@@ -141,7 +141,7 @@ This code block will:
 
 ## Troubleshooting
 
-### "Cannot find module '@agentscript/typescript-sdk'"
+### "Cannot find module '@agentscript/agentforce'"
 
 This is expected during validation - the script mocks the SDK imports. If you see this error when running the docs site, ensure dependencies are installed:
 
@@ -177,4 +177,4 @@ Possible improvements:
 - `validate-code-blocks.ts` - The validation script
 - `package.json` - Contains the `validate-code-blocks` script
 - `.github/workflows/ci.yml` - CI pipeline that runs validation
-- `docs/typescript-sdk/*.md` - Documentation files with code blocks
+- `docs/**/*.md` - Documentation files with code blocks

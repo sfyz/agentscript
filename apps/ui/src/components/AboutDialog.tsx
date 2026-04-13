@@ -64,12 +64,9 @@ export function AboutDialogContent() {
       {/* Support */}
       <div className="px-6 pt-4 pb-2 text-center text-xs text-muted-foreground">
         <p>
-          Questions? Reach out on{' '}
-          <span className="font-medium text-foreground">#agentscript-dev</span>{' '}
-          or{' '}
-          <span className="font-medium text-foreground">
-            #agentscript-discussion
-          </span>
+          Questions? Open an issue on{' '}
+          <span className="font-medium text-foreground">GitHub</span> or start a{' '}
+          <span className="font-medium text-foreground">Discussion</span>
         </p>
       </div>
 

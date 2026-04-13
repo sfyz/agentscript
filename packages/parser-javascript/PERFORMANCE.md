@@ -1,7 +1,7 @@
 # Parser-TS Performance Report
 
 > Auto-generated on 2026-03-21 18:46:14 UTC
-> Node: v22.19.0 | Commit: 3b04bc5d | Branch: sberryman/custom-parser
+> Node: v22.19.0 | Commit: 3b04bc5d
 
 ## Summary
 

@@ -173,7 +173,7 @@ export function compileTool(
     type: isConnectedAgent ? 'supervision' : 'action',
     target,
     // TODO: Add connected agent tools to have bound_inputs/llm_inputs in the supervision definition
-    // once the Agent Graph is updated. This is in the backlog for post-TDX as of 2026-03-31.
+    // once the runtime specification supports it.
     // bound_inputs: Object.keys(boundInputs).length > 0 ? boundInputs : {},
     // llm_inputs: llmInputs,
     // Only include bound_inputs and llm_inputs for non-connected-agent tools

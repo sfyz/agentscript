@@ -15,7 +15,7 @@ export const featureFlags = {
   builder: false,
   /** Simulate page (/simulate route) */
   simulate: false,
-  /** UI Theme switcher (IDE / NGA) in settings menu */
+  /** UI Theme switcher (IDE / Visual) in settings menu */
   uiThemeSwitcher: false,
   /** Settings dialog */
   settingsDialog: false,

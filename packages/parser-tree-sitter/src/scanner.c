@@ -1,3 +1,10 @@
+/*
+ * Copyright (c) 2026, Salesforce, Inc.
+ * All rights reserved.
+ * SPDX-License-Identifier: Apache-2.0
+ * For full license text, see the LICENSE file in the repo root or https://www.apache.org/licenses/LICENSE-2.0
+ */
+
 #include "tree_sitter/alloc.h"
 #include "tree_sitter/array.h"
 #include "tree_sitter/parser.h"
@@ -138,7 +145,7 @@ bool tree_sitter_agentscript_external_scanner_scan(void *payload, TSLexer *lexer
             indent_length++;
             skip(lexer);
         } else if (lexer->lookahead == '\r' || lexer->lookahead == '\f') {
-            // TODO (Allen): do we need to handle form feed at all?
+            // TODO: do we need to handle form feed at all?
             indent_length = 0;
             skip(lexer);
         } else if (lexer->lookahead == '\t') {
@@ -230,7 +237,7 @@ unsigned tree_sitter_agentscript_external_scanner_serialize(void *payload, char 
 void tree_sitter_agentscript_external_scanner_deserialize(void *payload, const char *buffer, unsigned length) {
     Scanner *scanner = (Scanner *)payload;
 
-    // TODO (Allen): could be replaced with array_clear
+    // TODO: could be replaced with array_clear
     array_delete(&scanner->indents);
     array_push(&scanner->indents, 0);
 

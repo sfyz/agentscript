@@ -6,7 +6,7 @@
  */
 
 export type Theme = 'light' | 'dark' | 'system';
-export type UiTheme = 'code' | 'nga';
+export type UiTheme = 'code' | 'visual';
 
 export interface ThemeState {
   theme: Theme;

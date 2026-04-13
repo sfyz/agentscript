@@ -125,7 +125,7 @@ start_agent main:
 });
 
 describe('config: additional parameters', () => {
-  // NOTE: Differs from Python compiler — TS always defaults reset_to_initial_node: true
+  // NOTE: The compiler always defaults reset_to_initial_node: true
   it('should default reset_to_initial_node to true when config has no extras', () => {
     const source = `
 config:

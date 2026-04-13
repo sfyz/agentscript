@@ -40,7 +40,7 @@ interface AgentActions {
 
 export type AgentStore = AgentState & AgentActions;
 
-// TODO: Replace with API call to /api/agents
+// Agent state is stored client-side in localStorage.
 export const useAgentStore = create<AgentStore>()(
   persist(
     (set, get) => ({

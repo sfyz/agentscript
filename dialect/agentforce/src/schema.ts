@@ -616,7 +616,7 @@ export const AgentforceSchema = {
                 with order_number=...`
     )
   ),
-  // TODO: restore deprecated() call once migration is complete
+  // Deprecation notice temporarily disabled.
   // .deprecated(
   //   'Replace topic with subagent, actions with tool_definitions and reasoning.actions with reasoning.tools.',
   //   { replacement: 'subagent' }

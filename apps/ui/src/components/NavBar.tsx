@@ -119,7 +119,7 @@ export function NavBar() {
     setTheme(newTheme);
   };
 
-  const handleUiThemeChange = (newUiTheme: 'code' | 'nga') => {
+  const handleUiThemeChange = (newUiTheme: 'code' | 'visual') => {
     setUiTheme(newUiTheme);
   };
 
@@ -131,7 +131,7 @@ export function NavBar() {
 
   const uiThemeOptions = [
     { value: 'code', label: 'IDE' },
-    { value: 'nga', label: 'NGA' },
+    { value: 'visual', label: 'Visual' },
   ] as const;
 
   return (
